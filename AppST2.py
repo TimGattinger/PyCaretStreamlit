@@ -22,12 +22,12 @@ def run():
     "How would you like to predict?",
     ("Online", "Batch"))
 
-    st.sidebar.info('This app is created to predict patient hospital charges')
+    st.sidebar.info('Diese App zeigt was die Krankenkasse im Jahr für dich blechen muss. Dick und Raucher = Teuer')
     st.sidebar.success('https://www.pycaret.org')
     
     #st.sidebar.image(image_hospital)
 
-    st.title("Insurance Charges Prediction App")
+    st.title("Vorhersage: Wie sehr die Krankenkasse gesackelt wird von einfachen Kassepatienten")
 
     if add_selectbox == 'Online':
 
@@ -50,7 +50,7 @@ def run():
             output = predict(model=model, input_df=input_df)
             output = '$' + str(output)
 
-        st.success('The output is {}'.format(output))
+        st.success('Das Ergebnis {}'.format(output))
 
     if add_selectbox == 'Batch':
 
